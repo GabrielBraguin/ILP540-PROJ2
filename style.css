@@ -1,0 +1,64 @@
+body {
+  background-image: url("bg.jpg");
+  background-attachment: fixed;
+  background-color: rgba(22, 11, 3, 0.8);
+  color: ivory;
+  font-family: Arvo, "Courier New", courier, monospace;
+  font-size: 100%;
+  margin: auto;
+}
+
+p, sup, span, label {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+div#newplayer {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+fieldset#fsnp {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-width: 7px;
+  border-style: inset;
+  border-color: darkgray;
+  border-radius: 15px;
+  padding: 15px;
+  margin: auto;
+}
+
+fieldset#fsnp:hover {
+  background-color: rgba(53, 50, 42, 0.5);
+}
+
+input#idname, textarea#idhist {
+  width: 90%;
+  resize: none;
+}
+
+input, textarea#idhist, select#slclasse {
+  font-family: Arvo, courier;
+  font-size: 1.15em;
+  margin: 5px;
+  text-align: center;
+  padding: 2px;
+}
+
+output.stats {
+  font-size: 1.4em;
+  background-color: white;
+  border-radius: 6px;
+  padding: 1px;
+}
+
+input#submitform, input#redefform {
+    background-color: rgba(100, 150, 200, 0.8);
+    color: ivory;    
+}
+
+input#submitform:hover, input#redefform:hover {
+    background-color: rgba(100, 150, 200, 0.4);
+}

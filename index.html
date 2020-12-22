@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US" style="height:100%;">
+<head>
+    <title>Criação de Personagem</title>
+    <base href="???" target="_blank">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3600">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <div id="newplayer">
+        <!--<form action="formaction.php" method="post"  id="frmnp" target="_self" oninput="av.value=parseInt(a.value); bv.value=parseInt(b.value); cv.value=parseInt(c.value); total.value=parseInt(av.value)+parseInt(bv.value)+parseInt(cv.value)">-->
+        <form action="" method="post"  id="frmnp" target="_self" oninput="av.value=parseInt(a.value); bv.value=parseInt(b.value); cv.value=parseInt(c.value); total.value=parseInt(av.value)+parseInt(bv.value)+parseInt(cv.value)">
+            <fieldset id="fsnp">
+                <legend style="font-size:1.3em">Crie seu Personagem:</legend>
+
+                <input id="idname" type="text" name="name" placeholder="Nome" required="required" style="font-size:1.5em;" >
+
+                <textarea id="idhist" name="bg" rows="5" cols="50" placeholder="Escreva o background do personagem(opcional, deixe em branco se desejar)."></textarea>
+                <br>
+                <label for="slclasse">Classe:</label>
+                <br>
+                <select name="class" id="slclasse">
+                    <option value="Guerreiro">Guerreiro(a)</option>
+                    <option value="Arqueiro">Arqueiro(a)</option>
+                    <option value="Mago">Mago(a)</option>
+                </select>
+                <br><br>
+                <input type="radio" name="sex" value="M" checked="checked">
+                <span> Homem</span>
+                <br>
+                <input type="radio" name="sex" value="F">
+                <span> Mulher</span>
+                <br>
+                <br>
+                <b><span>Pontos Utilizados: </span>
+                    <output id="total" for="a b c" style="font-size:1.15em"></output>
+                    <span style="font-size:1.2em">/15</span>
+                    <br>
+                    <sup>Força ---------- 0</sup>
+                    <input type="range" name="str" autocomplete="off" onchange="checaTotal()" min="0" max="10" id="a" value="5">
+                    <sup>10 ->  
+                    <output id="av" class="stats" for="a" style="color:red"></output>
+                    <br></sup>
+                    <sup>Inteligência - 0</sup>
+                    <input type="range" name="intel" autocomplete="off" onchange="checaTotal()" min="0" max="10" id="b" value="5">
+                    <sup>10 ->
+                    <output id="bv" class="stats" for="b" style="color:blue"></output>
+                    <br></sup>
+                    <sup> Destreza ------ 0</sup>
+                    <input type="range" name="dex" autocomplete="off" onchange="checaTotal()" min="0" max="10" id="c" value="5">
+                    <sup>10 -> 
+                    <output id="cv" class="stats" for="c" style="color:green"></output>
+                    <br><br></sup>
+                </b>
+                <input type="button" id="submitform" value="Inserir Jogador">
+                <input type="reset" id="redefform">
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="javascript.js"></script>   
+</body>
+</html>
